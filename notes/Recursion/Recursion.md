@@ -1,7 +1,7 @@
 # Task(s)
-* Complete further research on how to create a recursive function/method. There are a few examples of recursive functions [here](https://github.com/johnfraserss/ICS4U/tree/master/examples/recursion).
+* Complete further research on how to create a recursive function/method. There are a few examples of recursive functions in this repo.
 * Create an iterative function (i.e. loops without recursion) and a recursive function to solve two out of the three problems below.
-* As a separate document, submit responses to the following questions: 
+* After completing the practice, consider the following questions: 
   * What are some common pitfalls of recursion? 
   * What issues did you run into during your development of the below algorithms?
 
@@ -48,18 +48,8 @@ If you ran iterativeCalculate("dob") you would get a return value of 2 ("dob" an
 If you ran recursiveCalculate("totally") you would get a return value of 7 ("t", "t", "o", "l", "l", "ll", and "tot" are all mirrordromes)
 ```
 
-# Due Dates and Submission Details
-Please see the due dates page for more details on when this is due and how to submit your work.
+# Submission Details
+Commit your two completed pratice to your homework repo.
 
-* Submit your code (or a link to it).
-* Submit a document with the responses to the questions provided.
-
-# Learning Goals and Success Criteria
-The [Overarching Learning Goal(s)](https://github.com/johnfraserss/ICS4U/wiki/images/ICS4U.jpg) for this include _Data Structures and Algorithms_. The specific Learning Goal(s) for this include:
-
-* _We are learning to design, write and analyze complex algorithms and subprograms_ &#x1F4D9;&#x1F4D9;&#x1F4D9;
-
-| Learning Goal | Success Criteria | Learning and Improvement Comments |
-| ------------- | ---------------- | --------------------------------- |
-| &#x1F4D9;&#x1F4D9;&#x1F4D9; | I can design a simple and efficient recursive algorithm. | |
-| &#x1F4D9;&#x1F4D9;&#x1F4D9; | I can identify common pitfalls in recursive functions. | |
+# Sources
+Original Note retreived from [here](https://github.com/johnfraserss/ICS4U/wiki/Recursion) on Sept. 9, 2021
