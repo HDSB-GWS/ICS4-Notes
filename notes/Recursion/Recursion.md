@@ -1,3 +1,12 @@
+# Useful Links
+Video Note - https://drive.google.com/file/d/1U8-ckHeSivMHrqPXgHQt2vhRSx1DyVrE/view
+Recursion Animation - http://www.algoanim.ide.sk/index.php?page=showanim&id=60
+
+https://en.wikipedia.org/wiki/Recursion
+https://en.wikipedia.org/wiki/Factorial
+
+
+
 # Task(s)
 * Complete further research on how to create a recursive function/method. There are a few examples of recursive functions in this repo.
 * Create an iterative function (i.e. loops without recursion) and a recursive function to solve two out of the three problems below.

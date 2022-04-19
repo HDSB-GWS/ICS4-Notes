@@ -10,54 +10,63 @@
  *
  * Take `4!`, this is equal to 4 x 3 x 2 x 1, or 24
  *
- * So how do we implement this in code?
+ * So how do we implement this in code?  See Below
+ * 
+ * Also, see https://www.cs.usfca.edu/~galles/visualization/RecFact.html for a cool visualization
  */
 
 
 class Main {
 
   /**
+   * Iteratively finds the factorial of N
+   *
+   * @param n a positive integer
+   * 
+   * @return factorial of N
+   */
+  public static long iterativeFactorial(long n) {
+    long result = 1;
+    for (long i = 2; i<= n; i+= 1) {
+      result *= i;
+    }
+
+    return result;
+  }
+
+
+    /**
    * Recursively finds the factorial of N
    *
    * @param N a positive integer
-   * @param product the product of previous steps, 1 for the first
+   * 
    * @return factorial of N
    */
-  public static int recursiveFactorial(int N, int product) {
+  public static long recursiveFactorial(long n) {
     /**
-     * Start off by checking to see if N is equal to 1. If it is, we can just return
-     * the product since any number times 1 is equal to that number.
+     * Halting Condition
+     * Every recusive method needs an end point, or it will loop infinitly.
+     * 
+     * Since the factorial operator is only defined for positive integers (and zero), we will stop when we get to 0
+     * 
      */
-    if (N == 1) {
+    if (n <= 1) {
       // notice that the default value of product is set to 1, so that 1! = 1, and
       // that N*1 = N
-      return product;
+      return 1;
     } else {
       /**
-       * If N isn't equal to one, there's more numbers to multiply We pass N-1 into
+       * If N isn't equal to zero, there's more numbers to multiply We pass N-1 into
        * `recursiveFactorial` as N, as well as the product, which is just product*N.
        */
-      return recursiveFactorial(N - 1, product * N);
+      return n*recursiveFactorial(n - 1);
     }
   }
 
   public static void main(String[] args) {
-    /**
-     * Naive approach
-     *
-     * In this approach, we're given N, and we store the factorial of N in a
-     * variable The factorial of N is manually calculated by typing everything out.
-     *
-     * As you may have predicted, this won't hold true for all integers N, if N was
-     * 5, then `N!` wouldn't be equivalent to 4*3*2*1
-     */
-    int N = 4;
-    int factorialOfN = 4*3*2*1;
-
-    // driver code for testing
-
-    // note that we pass 1 as the product initially
-    System.out.println(recursiveFactorial(4,1));
+   
+    System.out.println(iterativeFactorial(4));
+    System.out.println(recursiveFactorial(4));
 
   }
 }
@@ -67,29 +76,30 @@ class Main {
 /**
  * Let's take the driver code/example there, finding the factorial of 4.
  *
- * We start off by passing 6 into `recursiveFactorial`, 6 !== 1,  so we pass
- * 4-1, which is 3, into recursiveFactorial, as well as the product, which is equal to 1*4, or just 4.
- * At N = 4:
- *    product = 4, N = 3
+ * We start off by passing 4 into `recursiveFactorial`, 4 !== 1,  so we pass 4-1, which is 3, into recursiveFactorial
  *
- * `recursiveFactorial` is called again with the above parameters.
- * N !== 1, which means we pass N-1, which is 2, into `recursiveFactorial` with the product of
- * 4*3, which is 12.
- * At N = 3:
- *    product = 12, N = 2
- *
- * `recursiveFactorial` is called again with the above parameters.
- * N !== 1, which means we pass N-1, which is 1, into `recursiveFactorial` with the product of
- * 12*2, which is 24.
- * At N = 2:
- *    product = 24, N = 1
- *
- * `recursiveFactorial` is called again with the above parameters.
- * N === 1, which means we return the product, 24
- *
- * 24 === 4!
- */
- /*
+ * `recursiveFactorial` is called again with a parameter of n = 3.
+ * N != 1, which means we pass N-1, which is 2, into `recursiveFactorial`
+ * 
+ * * `recursiveFactorial` is called again with a parameter of n = 2.
+ * N != 1, which means we pass N-1, which is 1, into `recursiveFactorial`
+ * 
+ * * `recursiveFactorial` is called again with a parameter of n = 1.
+ * N == 1, which means we return a value of 1 to the previous verison of `recursiveFactorial`
+ * 
+ * the returned value is multipled by 2, 2*1=2, so a value of 2 is returned to the previous verison of `recursiveFactorial`
+ * 
+ * the returned value is multipled by 3, 2*3=6, so a value of 6 is returned to the previous verison of `recursiveFactorial`
+ * 
+ * the returned value is multipled by 4, 6*4=24, so a value of 24 is returned to the previous verison of `recursiveFactorial`
+ * 
+ * The value of 24 is printed out on the screen
+  */
+ 
+ 
+ 
+  /*
  Example Recursion Program Retreived From: https://github.com/johnfraserss/ICS4U/tree/master/examples/recursion
 On Sept. 9, 2021
+Modifed by C. Brooks-Prenger
 */
