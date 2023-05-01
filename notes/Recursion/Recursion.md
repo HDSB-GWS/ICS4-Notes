@@ -40,6 +40,7 @@ If you ran iterativeCalculate("kayak") you would get a return value of 2 ("kayak
 If you ran recursiveCalculate("kayak") you would also get a return value of 2 ("kayak" and "aya" are both palindromes).
 ```
 
+<!-- Remove for the time being
 **Problem 3: Mirrordromes**
 ```
 Given a string, calculate the amount of mirrordromes that 
@@ -57,7 +58,7 @@ Examples:
 If you ran iterativeCalculate("dob") you would get a return value of 2 ("dob" and "o" are both mirrordromes).
 If you ran recursiveCalculate("totally") you would get a return value of 7 ("t", "t", "o", "l", "l", "ll", and "tot" are all mirrordromes)
 ```
-
+-->
 # Submission Details
 Commit your two completed pratice to your homework repo.
 
